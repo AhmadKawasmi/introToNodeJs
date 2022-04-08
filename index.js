@@ -3,6 +3,22 @@ import auth from './Auth.js'
 import router from './server/routes/greetApi.js'
 import mongoose from 'mongoose'
 import * as dotenv from 'dotenv'
+import User from './server/models/User.js'
+
+const u = new User({
+    name: 'sameer',
+    email: 'ahmadkawasmi@gmail.com',
+    username: 'Ahmad Kawasmi',
+    isLoggedIn: true,
+    lastLoggedIn: 3453,
+    password: '2911919'
+
+})
+
+// u.save().then(function(res) {
+//     console.log("saved");
+//     console.log(res);
+// })
 
 dotenv.config()
 const mongoUri = process.env.MONGO_URI
