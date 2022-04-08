@@ -5,6 +5,7 @@ const msgs = []
 
 
 
+
 router.post('/:user/:msg?', function(req, res) {
     const msg = req.params.msg
     msgs.push(msg)
